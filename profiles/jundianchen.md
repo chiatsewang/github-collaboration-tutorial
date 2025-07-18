@@ -1,3 +1,3 @@
 ## Jundian Chen
-I am a junior student from
+I am a junior student from NDHU.
 
