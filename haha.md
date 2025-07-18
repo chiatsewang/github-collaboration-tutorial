@@ -1,2 +1,2 @@
-hahaha
-MBTI: ENTP
+tina cheng
+NCCU 
