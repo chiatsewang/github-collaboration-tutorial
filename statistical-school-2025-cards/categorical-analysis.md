@@ -5,13 +5,9 @@
 #2.看類別與類別之間是否有關 → 列聯表、卡方檢定
 #3.建立預測模型 → logistic regression、決策樹等
 
-
-類別資料分析
-
 複習網址
 1. https://scgeeker.github.io/lsj-book-zh_tw/10-Categorical-data-analysis.html
-
-
+2. 
 類別
 可以用
 .count
@@ -21,7 +17,6 @@ goal
 1.find the association between different mushrooms
 
 2.How to choose parameters
-
 
 Notation
 1.設定兩種類別的應變數
