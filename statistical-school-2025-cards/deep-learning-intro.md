@@ -8,5 +8,5 @@ DDIM使用了動態的方式來採樣；而DDPM是遵照著馬可夫鏈，使用
 DDIM可以跳過一些擴散時間進行採樣；但DDPM必須遵照時間一個一個採樣。這代表DDIM可以預測可能10個擴散時間後的結果，這就代表比起一次1個擴散時間的DDPM，DDIM的速度就被增加了10倍！
 
 # Data Annotation
--Label Studio ( A tool designed to assist in accurate data labeling and result verification. )
+-Label Studio ( A tool designed to assist in accurate data labeling and result verification. )/n
 -LLM labeling ( It is more appropriate for a language model to provide positive/neutral/negative responses to the data, rather than outputting a numerical score.)
