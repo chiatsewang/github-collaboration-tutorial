@@ -75,7 +75,7 @@ Accurcy= P[y_hat = 1|y=1] or P[y_hat = 0|y=0](Sum)
 
 羅吉斯的分類好處是，算出來的係數 is positive，資料則有正相關，反之，亦同 
 
-
+probability matters ! ( ; 3;) ///
 
 
 
