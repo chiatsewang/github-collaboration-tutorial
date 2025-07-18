@@ -15,7 +15,6 @@
 
 goal 
 1.find the association between different mushrooms
-
 2.How to choose parameters
 
 Notation
