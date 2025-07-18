@@ -1,5 +1,5 @@
 # Intro  
-I'm a senior student from the Department of Statistics at Feng Chia University.
+I'm a senior student from the Department of Statistics at FCU.
 
 # Interests 
 Statistics, Mathematics, Athletics.
