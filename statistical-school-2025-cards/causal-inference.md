@@ -1,94 +1,48 @@
 # 因果推論 Causal Inference
 # Causal Inference 筆記
 
-## 1. 基礎概念
-- **為什麼需要因果推論？**
-  - 與相關性的區別
-- **Counterfactual（反事實框架）**
-  - 例子與數學定義
-- **因果圖（Causal Diagram, DAG）**
-  - 節點、邊、路徑概念
-- **Confounder / Mediator / Collider**
-  - 定義與差異
+#part1 核心理論概念
 
----
+### **因果推論基本概念與條件**
 
-## 2. 因果推論的主要假設
-- Ignorability（可忽略性）
-- Positivity（可行性/覆蓋性）
-- Stable Unit Treatment Value Assumption (SUTVA)
-- Exchangeability
+**1. 潛在結果表示（Potential Outcomes）**
 
----
+* 描述個體在不同處理狀況下可能的結果 $Y(s=0), Y(s=1)$。
+* 有助於定義與理解因果效應的實質意涵。
 
-## 3. 因果效應定義
-- Average Treatment Effect (ATE)
-- Average Treatment Effect on the Treated (ATT)
-- Conditional Average Treatment Effect (CATE)
-- Marginal Treatment Effect (MTE)
+**2. 因果關係（Causation）與關聯（Association）**
 
----
+* **關聯**：觀察到的平均差異，但不一定具有因果性。
+* **因果**：處理 $S$ 對結果 $Y$ 的真實影響。
+* 當交換性成立時，關聯可用於推斷因果。
 
-## 4. 常用方法
-### 4.1 傳統方法
-- Regression Adjustment（回歸調整）
-- Stratification（分層分析）
-- Standardization（標準化）
+**3. 交換性（Exchangeability）**
 
-### 4.2 傳統觀察性方法
-- Matching（匹配法）
-  - Propensity Score Matching (PSM)
-  - Mahalanobis Distance Matching
-- Weighting（Inverse Probability Weighting, IPW）
-- Doubly Robust Estimation（雙穩健估計）
+* 假設潛在結果在不同處理組之間可互換。
+* 換句話說，治療組與控制組在潛在結果上是平衡的。
+* \*\*隨機化（Randomization）\*\*可保證交換性，讓治療組與控制組在潛在結果上彼此獨立。
 
-### 4.3 進階方法
-- Instrumental Variables (IV)
-- Difference-in-Differences (DiD)
-- Regression Discontinuity Design (RDD)
-- Synthetic Control
+**4. 因果一致性（Causal Consistency）**
 
-### 4.4 圖模型與 do-calculus
-- Pearl’s do-operator
-- Back-door & Front-door Criteria
+* 當個體接受實際處理時，其觀察結果 $Y$ 等於潛在結果中對應的值 $Y(s)$。
+* 保證我們能用觀察到的資料代表對應潛在世界的結果。
 
-### 4.5 Modern Causal ML
-- Causal Forest
-- Targeted Maximum Likelihood Estimation (TMLE)
-- Bayesian Causal Inference
+**5. 因果效應測量**
 
----
+* 個體層面的因果效應難以直接觀察（因為每人只能看到一個潛在結果）。
+* 平均因果效應（ACE）用於衡量群體層面的整體影響。
 
-## 5. 因果識別與檢驗
-- DAG 與識別條件（backdoor / frontdoor）
-- Sensitivity Analysis（敏感度分析）
-- Placebo Test
-- Falsification Test
+**6. 條件交換性（Conditional Exchangeability）**
 
----
+* 當控制特定協變數 $L$ 後，有 $Y(s) \perp S \mid L$。
+* 在此條件下，**條件關聯 = 因果效應**。
+* 可減少混雜因子的偏差，提升因果推論的可靠性。
 
-## 6. 應用案例
-- 醫療研究（治療 vs. 對照）
-- 公共政策分析（政策介入）
-- 商業 A/B 測試
-- 社會科學數據
+**7. 總結**
 
----
+* 若 **（條件）交換性 + 一致性** 成立，關聯即可用於推導因果效應。
+* 關鍵在於判斷何時觀察到的關聯能真實反映因果關係。
 
-## 7. 工具與程式實作
-- R: `MatchIt`, `causalTree`, `causalForest`, `dagitty`
-- Python: `DoWhy`, `EconML`, `CausalML`
-- **實作流程範例：**
-  1. DAG 建模  
-  2. 資料準備（confounder 處理）  
-  3. 方法選擇  
-  4. ATE 估計與檢驗  
 
----
 
-## 8. 延伸閱讀與經典書籍
-- Judea Pearl: *Causality*
-- Hernán & Robins: *Causal Inference: What If*
-- Imbens & Rubin: *Causal Inference for Statistics, Social, and Biomedical Sciences*
-- Scott Cunningham: *Causal Inference: The Mixtape*
-- 123
+-
