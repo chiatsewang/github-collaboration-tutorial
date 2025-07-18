@@ -1,2 +1,2 @@
 # Brian
-I'm a student major in statistics
+I'm a statistics major at Tamkang University.
